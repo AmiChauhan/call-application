@@ -77,10 +77,10 @@ public class CallApp {
         // System.out.println(userArrayList);
         for (int i = 0; i < userArrayList.size(); i++) {
             System.out.println(userArrayList.get(i).getNumber() +
-                    "" + userArrayList.get(i).getName() + "" +
-                    userArrayList.get(i).getMisscall() + "" +
-                    userArrayList.get(i).getOutgoing() + "" + userArrayList.get(i).getIncoming()
-                    + "" + userArrayList.get(i).getDate());
+                    "/n" + userArrayList.get(i).getName() + "/n" +
+                    userArrayList.get(i).getMisscall() + "/n" +
+                    userArrayList.get(i).getOutgoing() + "/n" + userArrayList.get(i).getIncoming()
+                    + "/n" + userArrayList.get(i).getDate());
         }
         choice();
 
@@ -150,7 +150,7 @@ public class CallApp {
         }
         System.out.println("enter your choice");
         int choice=getinput.nextInt();
-        System.out.println(userArrayList.get(choice).getName());
+        System.out.println(userArrayList.get(choice).getMisscall());
 
     }
 
@@ -181,9 +181,22 @@ public class CallApp {
 
     }
 
-    public void userincomingcall() {
+    public void userincomingcall()
+    {
+
+
+        for (int i = 0; i < userArrayList.size(); i++) {
+            System.out.println(i + ". " + userArrayList.get(i).getName());
+
+        }
+        System.out.println("enter your choice");
+        int choice=getinput.nextInt();
+        System.out.println(userArrayList.get(choice).getIncoming());
 
     }
+
+
+
 
     public void outgoing() {
         int i = 0;
@@ -212,7 +225,15 @@ public class CallApp {
 
     }
 
-    public void useroutgoingcall() {
+    public void useroutgoingcall()
+    {
+        for (int i = 0; i < userArrayList.size(); i++) {
+            System.out.println(i + ". " + userArrayList.get(i).getName());
+
+        }
+        System.out.println("enter your choice");
+        int choice=getinput.nextInt();
+        System.out.println(userArrayList.get(choice).getOutgoing());
 
     }
 
